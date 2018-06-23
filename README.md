@@ -1,6 +1,6 @@
-# About
+# 4Clojure Koans Solutions
 
-This repository holds my solutions to the [4Clojure Clojure Koans](http://www.4clojure.com/problems).
+This repository holds my solutions for the [4Clojure Koans](http://www.4clojure.com/problems).
 
 The problems are solved top to bottom, not in the order of the problem numbers.
 
@@ -12,7 +12,7 @@ The link to the corresponding problem can be found in a comment in every file.
 
 For every problem this should work:
 
-* Open a file
+* Open the problem file
 * Go to the link in the comment of the file
 * Copy the complete content of the file to the clipboard
 * Paste the clipboard content in the text box of the problem
