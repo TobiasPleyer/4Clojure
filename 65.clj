@@ -2,16 +2,18 @@
 (fn [s]
   (let [k (gensym)
         s2 (conj s [k 42])]
-    (if (contains? s2 k)
+    (if (= 42 (get s2 k))
       :map
-      (let [cnt (count s)
+      (let [k1 (gensym)
+            k2 (gensym)
+            cnt (count s)
             s2 (-> s
-                   (conj 1)
-                   (conj 2)
-                   (conj 2))]
+                   (conj k1)
+                   (conj k2)
+                   (conj k2))]
        (cond
          (< (count s2) (+ cnt 3)) :set
-         (= 1 (first s2)) :vector
-         (= 2 (first s2)) :list
+         (= k2 (last s2)) :vector
+         (= k2 (first s2)) :list
          :else (do
                  (println "Bad argument!")))))))
